@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Reportes - Videojuegos</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row padding-row">
+				<div class="col">
+					<img src="img/reportaklogo.svg" class="logo" alt="ReporTak">
+				</div>
+				<div class="col-md-6 center">
+					<div class="row">
+						<div class="col-4">
+							<a href="#" class="btn-circle">
+								<div>
+									<i class="fas fa-users"></i>
+									<p>Alumnos</p>
+								</div>
+								<i class="fas fa-caret-down flecha"></i>
+							</a>
+						</div>
+						<div class="col-4">
+							<a href="#" class="btn-circle">
+								<div>
+									<i class="fas fa-gamepad"></i>
+									<p>Videojuegos</p>
+								</div>
+								<i class="fas fa-caret-down flecha"></i>
+							</a>
+						</div>
+						<div class="col-4">
+							<a href="#" class="btn-circle">
+								<div>
+									<i class="fas fa-chalkboard-teacher"></i>
+									<p>Grupo</p>
+								</div>
+								<i class="fas fa-caret-down flecha"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="row">
+						<div class="col-6">
+							<span class="title">Escuela</span>
+							<span class="txtcontent">DIEGO RIVERA</span>
+						</div>
+						<div class="col-6">
+							<span class="title">Maestro</span>
+							<span class="txtcontent">Helios Figueroa</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row padding-row">
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-6">
+							<span class="title">Grupo</span>
+							<select name="grupo" class="form-control selector">
+								<option value="">Selecciona</option>
+								<option value="3A">3° - A</option>
+							</select>
+						</div>
+						<div class="col-6">
+							<span class="title">Alumno</span>
+							<select name="alumno" class="form-control selector">
+								<option value="">Selecciona</option>
+								<option value="1">Ramón Perez</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 center">
+					<div class="btn-group btn-group-lg" role="group" aria-label="period-group">
+						<button class="btn btn-info">Quincenal</button>
+						<button class="btn btn-info">Mensual</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<span class="title">Periodo</span>
+					<select name="slc_periodo" class="form-control selector">
+						<option value="">Selecciona</option>
+						<option value="1">201908</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3 center"><strong>Asignatura</strong></div>
+				<div class="col-3 center"><strong>Juego</strong></div>
+				<div class="col-3 center"><strong>Indicador de aprendizaje</strong></div>
+				<div class="col-3 center"><strong>Tiempo de juego promedio</strong></div>
+			</div>
+			<div class="row padding-row">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-3 asignaturas">
+							<span class="asignatura donut-chart" data-toggle="modal" data-target="#exampleModal">Español</span>
+						</div>
+						<div class="col-3 juegos">
+							<a href="javascript:void(0);" class="juego line-chart" data-toggle="modal" data-target="#exampleModal">Planera Miedo 2.0</a>
+							<a href="javascript:void(0);" class="juego line-chart" data-toggle="modal" data-target="#exampleModal">Caracol</a>
+							<a href="javascript:void(0);" class="juego line-chart" data-toggle="modal" data-target="#exampleModal">Peluconas</a>
+							<a href="javascript:void(0);" class="juego line-chart" data-toggle="modal" data-target="#exampleModal">Corre cheto</a>
+							<a href="javascript:void(0);" class="juego line-chart" data-toggle="modal" data-target="#exampleModal">Las golosinas secretas</a>
+						</div>
+						<div class="col-3 juegos center">
+							<div class="indicador">
+								<span class="indicador color-a" data-container="body" data-toggle="popover" data-placement="right" data-content="No se encontró actividad en el juego" data-trigger="hover"></span>
+							</div>
+							<div class="indicador">
+								<span class="indicador color-b" data-container="body" data-toggle="popover" data-placement="right" data-content="Nivel uno - bajo dominio del juego" data-trigger="hover"></span>
+							</div>
+							<div class="indicador">
+								<span class="indicador color-c" data-container="body" data-toggle="popover" data-placement="right" data-content="Nivel dos - medio dominio del juego" data-trigger="hover"></span>
+							</div>
+							<div class="indicador">
+								<span class="indicador color-d" data-container="body" data-toggle="popover" data-placement="right" data-content="Nivel tres - alto dominio del juego" data-trigger="hover"></span>
+							</div>
+							<div class="indicador">
+								<span class="indicador color-e" data-container="body" data-toggle="popover" data-placement="right" data-content="Nivel cuatro - se ha alcanzado el indicador de aprendizaje" data-trigger="hover"></span>
+							</div>
+						</div>
+						<div class="col-3 juegos">
+							<span class="indicador">1</span>
+							<span class="indicador">2</span>
+							<span class="indicador">3</span>
+							<span class="indicador">4</span>
+							<span class="indicador">5</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-3 asignaturas">
+							<span class="asignatura">Matemáticas</span>
+						</div>
+						<div class="col-3 juegos">
+							<div class="juego">Mateo</div>
+							<div class="juego">Troglones</div>
+							<div class="juego">Globos</div>
+							<div class="juego">Isla tortuga</div>
+							<div class="juego">Super sumas</div>
+						</div>
+						<div class="col-3 juegos">
+							<div class="indicador"><span class="indicador color-a"></span></div>
+							<div class="indicador"><span class="indicador color-b"></span></div>
+							<div class="indicador"><span class="indicador color-c"></span></div>
+							<div class="indicador"><span class="indicador color-d"></span></div>
+							<div class="indicador"><span class="indicador color-e"></span></div>
+						</div>
+						<div class="col-3 juegos">
+							<span class="indicador">1</span>
+							<span class="indicador">2</span>
+							<span class="indicador">3</span>
+							<span class="indicador">4</span>
+							<span class="indicador">5</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Indicador de aprendizaje promedio histórico de Planeta miedo</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="graficas" style="width: 100%; height: 300px;">
+							<canvas id="chart-0"></canvas>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+		<script src="scripts/utils.js"></script>
+		<script src="scripts/scripts.js"></script>
+	</body>
+</html>
