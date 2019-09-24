@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-  $(".btn-circle").click(function(){
+  /* $(".btn-circle").click(function(){
     $(".btn-circle").removeClass("active");
     $(this).addClass("active");
-  });
+  }); */
 
   $('[data-toggle="popover"]').popover();
 
@@ -20,6 +20,12 @@ $(document).ready(function(){
 		setTimeout(() => { window.myDoughnut = new Chart(ctx, config); }, 800);
   });
 
+  $('.bar-chart').on('click', function(){
+    $("#chart-0").remove();
+    $(".modal-body").find(".graficas").html('<canvas id="chart-0"></canvas>');
+    setTimeout(() => { barChart(); }, 800);
+  });
+
 });
 
 lineChart = () => {
@@ -27,6 +33,13 @@ lineChart = () => {
     type: 'line',
     data: data,
     options: options
+  });
+}
+
+barChart = () => {
+  var chart = new Chart('chart-0', {
+    type: 'bar',
+    data: barChartData
   });
 }
 
@@ -151,4 +164,46 @@ var config = {
       animateRotate: true
     }
   }
+};
+
+var barChartData = {
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  datasets: [{
+    label: 'Dataset 1',
+    backgroundColor: window.chartColors.red,
+    data: [
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor()
+    ]
+  }, {
+    label: 'Dataset 2',
+    backgroundColor: window.chartColors.blue,
+    data: [
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor()
+    ]
+  }, {
+    label: 'Dataset 3',
+    backgroundColor: window.chartColors.green,
+    data: [
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor(),
+      randomScalingFactor()
+    ]
+  }]
+
 };

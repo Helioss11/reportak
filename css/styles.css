@@ -175,3 +175,7 @@ body{
   padding: 15px 10%;
   text-align: left;
 }
+
+.body-table{
+  border-bottom: 1px solid #ccc;
+}
